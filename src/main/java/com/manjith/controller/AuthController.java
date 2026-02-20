@@ -1,7 +1,5 @@
 package com.manjith.controller;
-
 import com.manjith.entity.USER_ROLE;
-import com.manjith.entity.VerificationCode;
 import com.manjith.repository.UserRepository;
 import com.manjith.request.LoginOtpRequest;
 import com.manjith.request.LoginRequest;
@@ -49,8 +47,6 @@ public class AuthController {
     public ResponseEntity<AuthResponse>loginHandler(@RequestBody LoginRequest req) throws Exception {
         AuthResponse authResponse = authService.signing(req);
         return ResponseEntity.ok(authResponse);
-
-
 
     }
 
